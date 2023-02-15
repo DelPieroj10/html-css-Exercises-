@@ -1,0 +1,111 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #191919;
+}
+
+.container {
+    display: grid;
+    position: absolute;
+    width: 1000px;
+    height: 800px;
+    margin-left: 280px;
+    margin-top: -50px;
+}
+
+.main__box {
+    position: absolute;
+    top: 310px;
+    left: 460px;
+    width: 130px;
+    height: 130px;
+    background: #191919;
+    border-radius: 20px;
+    z-index: 1;
+}
+
+.main__box-body {
+    position: absolute;
+    top: 400px;
+    left: 290px;
+    width: 470px;
+    height: 175px;
+    background: darkgoldenrod;
+}
+
+.main__box-face {
+    position: absolute;
+    top: 420px;
+    left: 500px;
+    width: 50px;
+    height: 50px;
+    background-color: darkgoldenrod;
+    clip-path: polygon(14% 0, 86% 0, 100% 100%, 0% 100%);
+    z-index: 1;
+}
+
+.triangle {
+    position: absolute;
+    top: 405px;
+    background-color: darkgoldenrod;
+    z-index: 3;
+}
+
+.triangle__right-ear {
+    left: 506px;
+    clip-path: polygon(18% 0, 0% 100%, 100% 100%);
+}
+
+.triangle__right-ear,
+.triangle__left-ear {
+    width: 15px;
+    height: 25px;
+} 
+
+.triangle__left-ear {
+    left: 529px;
+    clip-path: polygon(82% 0, 0% 100%, 100% 100%);
+}
+
+.circles {
+    position: absolute;
+    background: #191919;
+    border-radius: 50%;
+}
+
+.circle__wing-right1,
+.circle__wing-left1 {
+    width: 176px;
+    height: 160px;
+}
+
+.circle__wing-right2,
+.circle__wing-left2 {
+    width: 260px;
+    height: 160px;
+    /*background:greenyellow*/
+}
+
+.circle__wing-right1 {
+    top: 396px;
+    left: 176px;
+}
+
+.circle__wing-right2 {
+    top: 500px;
+    left: 265px;
+}
+
+.circle__wing-left1 {
+    top: 396px;
+    left: 702px;
+}
+
+.circle__wing-left2 {
+    top: 500px;
+    left: 525px;
+}
+
+.box-body-color {
+    background: hsl(49, 66%, 53%)
+}

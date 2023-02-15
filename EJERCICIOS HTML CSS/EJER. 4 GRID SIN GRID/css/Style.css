@@ -1,0 +1,128 @@
+/*font-family: 'Barlow Semi Condensed', sans-serif;*/
+
+.image-user-profile {
+    width: 130px;
+    height: 75px;
+    border: 5px solid hsl(210, 3%, 63%);
+    background-color: hsl(210, 3%, 63%);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #333;
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-weight: 500;
+}
+
+.grid-container {
+    position: relative;
+    width: 1400px;
+    margin: 3rem auto; 
+} 
+
+.card {
+    position: relative;
+    display: inline-block;
+    height: 450px;
+    vertical-align: top;
+    margin-right: 1.5em;
+    padding: 2em;
+    line-height: 1.5;
+    border-radius: 1em;
+}
+
+.card__quotes {
+    position: absolute;
+    top: 1.5em;
+    right: 5em;
+}
+
+.card__title {
+    position: relative;
+} 
+
+.card__text {
+    opacity: .7;
+}
+
+.card__first {
+    width: 675px;
+}
+
+.card__second {
+    width: 350px;
+}
+
+.card__third {
+    width: 300px;
+    margin-right: 0;
+    height: 926px;
+}
+
+.card__fourth,
+.card__fifth {
+    position: absolute;
+    top: 478px;
+}
+
+.card__fourth {
+    left: 0;
+    width: 325px;
+}
+
+.card__fifth {
+    left: 355px;
+    width: 700px;
+}
+
+.card--king-blue, 
+.card--grey,
+.card--orange,
+.card--magenta {
+    color: whitesmoke;
+}
+
+.card--king-blue {
+    background-color: hsl(220, 100%, 13%);
+}
+
+.card--grey {
+    background-color: hsl(207, 9%, 38%);
+}
+
+.card--orange {
+    background-color: orange;
+}
+
+.card--magenta {
+    background-color: hsl(327, 100%, 46%);
+}
+
+.card--white {
+    background-color: #fff;
+}
+
+.user {
+    width: 250px;
+}
+
+.user__image {
+    border-radius: 50%;
+    max-width: 30%;
+}
+
+.user__image,
+.user__info {
+    display: inline-block;
+    vertical-align: middle;
+    text-shadow: 3px 3px 3px black;
+}
+
+.user__name,
+.user__category {
+    margin: .5em 1em;
+    opacity: .5;
+}

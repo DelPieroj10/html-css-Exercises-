@@ -1,0 +1,280 @@
+/*font-family: 'Dancing Script', cursive;
+font-family: 'Oswald', sans-serif; */
+
+head {
+    display: none;
+}
+
+body {
+    display: block;
+}
+
+/*SECTION 1*/
+
+.header__section {
+    background-color: #fbfbfb;
+    display: grid;
+    grid-template-columns: 80px 1fr 1fr 1fr 1fr;
+    grid-template-rows: 150px 1fr 1fr 1fr 10px;
+    height: 100vh;
+    grid-template-areas: 
+    "logo logo logo menu menu"
+    "social slide slide slide slide"
+    "social slide slide slide slide"
+    "social slide slide slide slide"
+    "footer footer footer footer footer";
+}
+
+.header__section-logo {
+    grid-area: logo;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+
+.header__section-logo-img img {
+    width: 600px;
+    margin-left: 40px;
+    cursor: pointer;
+}
+
+.header__section-social-media {
+    grid-area: social;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.header__section-social-media p {
+    transform: rotate(-90deg);
+    font-family: 'Dancing Script', cursive;
+    font-weight: 600;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.header__section-slide {
+    grid-area: slide;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "slide1 slide2 slide3 slide4";
+}
+
+.header__section-slide-item {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.slide-item-img1 {
+    grid-area: slide1;
+    background-image: url(/Assets/tim-douglas-barista.jpg);
+}
+
+.slide-item-img2 {
+    grid-area: slide2;
+    background-image: url(/Assets/cafe.jpg);
+}
+
+.slide-item-img3 {
+    grid-area: slide3;
+    background-image: url(/Assets/cake\ shop.jpg);
+}
+
+.slide-item-img4 {
+    grid-area: slide4;
+    background-image: url(/Assets/bakery.jpg);
+}
+
+.slide__cover {
+    opacity: 0;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    background-color: hsl(177, 72%, 38%);
+}
+
+.slide__cover h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: inherit;
+    font-family: 'Oswald', sans-serif, Arial, Helvetica;
+    font-weight: 200;
+    font-size: 60px;
+    color: whitesmoke;
+    text-shadow: 3px 3px 7px black;
+    line-height: 1.4;
+}
+
+.slide__cover:hover {
+    opacity: 100%;
+    transition: .7s;
+}
+
+.header__section-bottom {
+    grid-area: fotter;
+    font-family: 'Oswald', sans-serif, Arial, Helvetica;
+    font-weight: 100;
+    font-size: 12px;
+    margin-left: 20px;
+    margin-top: 15px;
+}
+
+/*SECTION 2*/
+
+.blog__section-2 {
+    margin: 90px 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 50px 35px 1fr;
+    grid-template-areas: 
+    "blogmaintitle blogmaintitle blogmaintitle"
+    "blogmainsubtitle blogmainsubtitle blogmainsubtitle"
+    "blog blog blog";
+}
+
+.blog__section-2 h1 {
+    grid-area: blogmaintitle;
+    font-family: 'Oswald', sans-serif, Arial, Helvetica;
+    font-weight: 600;
+    font-size: 60px;
+    display: inline-block;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.blog__section-2 h6 {
+    grid-area: blogmainsubtitle;
+    font-family: 'Dancing Script', cursive;
+    font-weight: 300;
+    font-size: 40px;
+    display: inline-block;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.blog__item {
+    display: inline-block;
+    padding: 15px;
+    margin-top: 15px;
+}
+
+.blog__item figure img {
+    display: inline-block;
+    width: 100%;
+    box-shadow: 10px 10px 150px 10px hsl(177, 72%, 38%);
+}
+
+figure,
+.article__description,
+.article__content{
+    margin-block-start: 1em;
+    margin-inline-end: 1em;
+    margin-inline-start: 20px;
+}
+
+.article__description {
+    font-size: 30px;
+    text-align: center;
+    /*color: lightslategrey;*/
+    color: whitesmoke;
+    text-shadow: 1px 1px 1px black;
+}
+
+.article__description,
+.article__content {
+    font-family: 'Oswald', sans-serif, Arial, Helvetica;
+}
+
+.article__content,
+.article__content-list {
+    font-family: 'Oswald', sans-serif, Arial, Helvetica;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.list__item {
+    padding: 5px;
+}
+
+/*SCREEM 1024PX MEDIA QUERIES*/
+
+@media screen and (max-width:1024px) {
+    .header__section-slide {
+        grid-area: slide;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: 
+        "slide1 slide2"
+        "slide3 slide4";
+    }
+
+    .blog__section-2 {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 50px 35px 1fr;
+        grid-template-areas: 
+        "blogmaintitle blogmaintitle"
+    "blogmainsubtitle blogmainsubtitle"
+    "blog blog";
+    }
+}
+
+/*SCREEM 768PX MEDIA QUERIES*/
+
+@media screen and (max-width:768px) {
+    .header__section-slide {
+        grid-area: slide;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-areas: 
+        "slide1" 
+        "slide2"
+        "slide3" 
+        "slide4";
+    }
+
+    .blog__section-2 {
+        grid-template-columns: 1fr;
+        grid-template-rows: 60px 50px 1fr;
+        grid-template-areas: 
+        "blogmaintitle"
+    "blogmainsubtitle"
+    "blog"
+    "blog"
+    "blog";
+    }
+}
+
+/*SCREEM 480PX MEDIA QUERIES*/
+
+@media screen and (max-width:480px) {
+    .header__section-slide {
+        grid-area: slide;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        grid-template-areas: 
+        "slide1" 
+        "slide2"
+        "slide3" 
+        "slide4";
+    }
+
+    .blog__section-2 {
+        grid-template-columns: 1fr;
+        grid-template-rows: 60px 50px 1fr;
+        grid-template-areas: 
+        "blogmaintitle"
+    "blogmainsubtitle"
+    "blog"
+    "blog"
+    "blog";
+    }
+}
